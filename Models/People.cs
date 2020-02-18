@@ -69,6 +69,7 @@ namespace SWApi1.Models
 
     public partial class People
     {
+        
         public static List<PeoplePerson> getPeople()
         {
             {
@@ -95,6 +96,7 @@ namespace SWApi1.Models
 
         public static PeoplePerson getPeoplePersonId (int id)
         {
+            //dotnet add package RestSharp --version 106.10.1
             RestClient client = new RestClient("https://swapi.co/api/people/id");
             RestRequest request = new RestRequest(Method.GET);
             IRestResponse response = client.Execute(request);
